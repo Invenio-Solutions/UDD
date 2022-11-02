@@ -6,7 +6,7 @@
 import telebot
 
 bot = telebot.TeleBot(
-    "5681690455:AAHUoX40kj5m-E_hRmJVPx88aRUcXKyL95U", parse_mode=None)
+    "<Token>", parse_mode=None)
 
 
 @bot.message_handler(commands=['start'])
