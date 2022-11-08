@@ -1,0 +1,8 @@
+{
+    "smtp_server": "smtp.office365.com",
+    "port": 587,
+    "sender": "noreply-devopsi@inveniolsi.com",
+    "password": "xxxxxxx",
+    "recipient": "DevOPS_Dashboard@inveniolsi.com",
+    "payload_file": ""
+}
