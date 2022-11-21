@@ -16,6 +16,10 @@
       type="text/css"
     />
     <script>
+      function dashboard(){
+        document.getElementById("closebtn").style.display="dashboard";
+        console.log("hwhs")
+      }
       // When the user clicks on <div>, open the popup
       function myFunction() {
         var popup = document.getElementById("myPopup");
@@ -241,9 +245,10 @@
   {% endcomment %}
   <body cstyle="background-image: url('static/dashboardbackground.jpg');">
 
-    <div id="mySidepanel" class="sidepanel">
+    <div id="mySidepanel" class="sidepanel"  onclick="dashboard()">
       <img src="static/dashboard.jpg" alt="dashboard" width="50" height="50" class="dashboard">
       <figcaption>Dashboard</figcaption>
+      <a href="http://127.0.0.1:8000/dashboard" color="">dxcvfbgnhjmk</a>
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
       {% comment %} <a href="#">About</a>
       <a href="#">Services</a>
@@ -314,6 +319,8 @@
     >
       Mulesoft
     </button>
+     <a href="http://127.0.0.1:8000/dashboard" color="">dxcvfbgnhjmk</a>
+    <button class="dashboard" onclick="dashboard()">bsdfghu</button>
     <div class="popup" onclick="myFunction()">
       <div class="popuptext" id="myPopup">
         <h2>Ram : 120 gb</h2>
@@ -362,7 +369,7 @@ function bellAlert(){
 }
 function dashboard(){
   document.getElementById("closebtn").style.display="dashboard";
-  
+  console.log("hwhs")
 }
 </script>
 </html>
