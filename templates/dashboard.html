@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script>
+      function dashboard() {
+        document.getElementById("closebtn").style.display = "dashboard";
+        console.log("hwhs");
+      }
+      // When the user clicks on <div>, open the popup
+      function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+      }
+      function myFunction1() {
+        var popup = document.getElementById("myPopup1");
+        popup.classList.toggle("show");
+      }
+      function myFunction2() {
+        var popup = document.getElementById("myPopup2");
+        popup.classList.toggle("show");
+      }
+      function myFunction3() {
+        var popup = document.getElementById("myPopup3");
+        popup.classList.toggle("show");
+      }
+    </script>
+
+    <style>
+
+      {% comment %} .sidebar {
+
+
+        position: fixed;
+
+        top: 55px;
+
+        left: 0px;
+
+        bottom: 0px;
+
+        background-color: grey;
+
+        width: 140px;
+
+        z-index: 2;
+
+        padding-top: 5px;
+      }
+      .navbar-brand {
+        color: white;
+      }
+      .sidebar-link {
+        height: 74px;
+
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        flex-direction: column;
+
+        cursor: pointer;
+      }
+
+      .sidebar-link:hover {
+        background-color: rgb(235 235 235);
+      }
+
+      .sidebar-link div {
+        font-family: Roboto, Arial;
+
+        font-size: 10px;
+      } {% endcomment %}
+
+      .mulesoft {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        margin-top: -146px; // half of height
+        margin-left: -229px; // half of width
+        cursor: pointer;
+      }
+      .mulesoftbutton {
+        position: absolute;
+        top: 80%;
+        left: 23%;
+        margin-top: -146px; // half of height
+        margin-left: -229px; // half of width
+        cursor: pointer;
+
+      }
+      /* Popup container */
+      .popup {
+        top: 70%;
+        left: 23%;
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .popup1 {
+        top: 60%;
+        left: 63%;
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .popup2{
+        top: 90%;
+        left: 25%;
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+      }
+      .popup3 {
+        top: 90%;
+        left: 63%;
+        position: absolute;
+        display: inline-block;
+        cursor: pointer;
+      }
+
+      /* The actual popup (appears on top) */
+      .popup .popuptext {
+        visibility: hidden;
+        width: 260px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 90%;
+        margin-left: -80px;
+      }
+      .popup1 .popuptext {
+        visibility: hidden;
+        width: 260px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 90%;
+        margin-left: -80px;
+      }
+      .popup2 .popuptext {
+        visibility: hidden;
+        width: 260px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 90%;
+        margin-left: -80px;
+      }
+      .popup3 .popuptext {
+        visibility: hidden;
+        width: 260px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 90%;
+        margin-left: -80px;
+      }
+
+      /* Popup arrow */
+      .popup .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 90%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+      .popup1 .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 90%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+      .popup2 .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 90%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+      .popup3 .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 90%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+      }
+
+      /* Toggle this class when clicking on the popup container (hide and show the popup) */
+      .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+      }
+      .popup1 .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+      }
+      .popup2 .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+      }
+
+      .popup3 .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+      }
+
+      /* Add animation (fade in the popup) */
+      @-webkit-keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .AWS {
+        position: absolute;
+        top: 62%;
+        left: 50%;
+        margin-top: -220px; // half of height
+        margin-left: -349px; // half of width
+        cursor: pointer;
+      }
+      .AWSbutton {
+        position: absolute;
+        top: 80%;
+        left: 54%;
+        margin-top: -146px; // half of height
+        margin-left: -229px; // half of width
+        cursor: pointer;
+      }
+      .Database {
+        position: absolute;
+        top: 50%;
+        left: 80%;
+        margin-top: -146px; // half of height
+        margin-left: -229px; // half of width
+        cursor: pointer;
+      }
+      .DatabaseButton {
+        position: absolute;
+        top: 80%;
+        left: 81%;
+        margin-top: -146px; // half of height
+        margin-left: -229px; // half of width
+        cursor: pointer;
+      }
+      .sidepanel  {
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: white;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        margin-top: 65px;
+      }
+
+      .sidepanel a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .sidepanel a:hover {
+        color: white;
+      }
+
+      .sidepanel .closebtn {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        font-size: 36px;
+      }
+
+      .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+      }
+
+      .openbtn:hover {
+        background-color:#444;
+      }
+      .grid-container{
+        display: grid;
+        grid-template-columns: 200px 200px;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+        gap: 100px;
+        background-color:#D9D9D9;
+        padding-left: 300px;
+        align-items:center;
+        padding-top: 100px;
+        padding-bottom: 150px;
+      }
+      .grid-container > div{
+        background-color: white;
+        border-radius:5px;
+         text-align: left;
+         font-size: 2.5cm;
+         align-items:center;
+         display:flex;
+         height:150px;
+         
+         box-shadow: -6px 6px 0px rgba(0,0,0,0.3);
+        
+         
+      
+             }
+             .img1button{
+              text-align:center;
+            }
+            .Logo{ width:50px;
+              height:40px;
+              margin-right:900px;
+              background-color:white;
+            }
+            
+
+     
+    </style>
+  </head>
+  {% comment %}
+  <body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  {% endcomment %}
+  <body cstyle="background-image: url('static/dashboardbackground.jpg');">
+
+    <div id="mySidepanel" class="sidepanel" onclick="dashboard()">
+      
+      <button>
+        <img
+          src="static/dashboard.jpg"
+          alt="dashboard"
+          width="50"
+          height="50"
+          class="dashboard"
+        />
+        <figcaption>Dashboard</figcaption>
+        <a href="http://127.0.0.1:8000/dashboard" color=""></a>
+      </button>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      {% comment %} <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a> {% endcomment %}
+    </div>
+
+    {% comment %}
+    <div class="sidebar">
+      <div class="Profile">
+        <div>Profile</div>
+        <img
+          src="static/profile.jpg"
+          alt="Profile"
+          width="50"
+          height="50"
+          class="Profile"
+        />
+      </div>
+      <div class="sidebar-link">
+        <div>Topology</div>
+      </div>
+
+      <div class="sidebar-link">
+        <div>TO-Do</div>
+      </div>
+
+      <div class="sidebar-link">
+        <div>Logs</div>
+      </div>
+
+      <div class="sidebar-link">
+        <div>Alert</div>
+      </div>
+
+      <div class="sidebar-link">
+        <div>Report</div>
+      </div>
+
+      <div class="sidebar-link">
+        <div>Task</div>
+      </div>
+    </div>
+    {% endcomment %}
+
+    <nav class="navbar navbar-expand-lg bg-white">
+      <div class="container-fluid">
+        {% comment %} <i style="font-size: 24px" class="far">&#xf2bd;</i> {% endcomment %}
+        <button class="openbtn" onclick="openNav()">☰</button>
+        <img src="static/InvenioLsi.jpg" alt="InvenioLogo" jpg class="Logo" />
+        <div class="d-flex">
+          <i
+            class="fa fa-bell fa-lg bell"
+            onclick="bellAlert()"
+            aria-hidden="true"
+            style="color: dark"
+          ></i>
+        </div>
+         <button>
+         <i style='font-size:24px' class='fas'  onclick="userbutton()">&#xf406;</i>
+         </button> 
+        {% comment %} <div class="d-flex">
+          <i class="fas fa-user-alt" aria-hidden="true" style="color: dark"></i>
+        </div> {% endcomment %}
+      </div>
+    </nav>
+    <div class="grid-container">
+      <div>
+        <img
+          src="static/mulesoft.jpg"
+          alt="Mulesoft"
+          width="50"
+          height="50"
+          onclick="myFunction()"
+          style='margin-left:60px'
+          class="mulesofttxt"
+        />
+        
+      </div>
+      <div class="popup" onclick="myFunction()">
+        <div class="popuptext" id="myPopup">
+          <h2>static hostname:ip 173-31-95-99</h2>
+          <br />
+          <h2>machine Id:51d4892f3f17</h2>
+          <br />
+          <h2>operating system: Amazon Linux2</h2>
+          <br />
+          <h2>cpu : 120 gb</h2>
+          <br />
+          <h2>Ram : 8 gb</h2>
+          <br />
+        </div>
+      </div>
+
+      <div>
+        <img src="static/database.jpg" alt="Db" width="50" height="50" style='margin-left:60px' onclick="myFunction1()"/>
+      </div>
+
+      <div class="popup1" onclick="myFunction1()">
+        <div class="popuptext" id="myPopup1">
+          <h2>Ram : 124567890 gb</h2>
+          <br />
+          <h2>Ram : 124320 gb</h2>
+          <br />
+          <h2>Harddisk : 120 gb</h2>
+          <br />
+          <h2>cpu : 120 gb</h2>
+          <br />
+          <h2>Ram : 120 gb</h2>
+          <br />
+        </div>
+      </div>
+      <div>
+        <img src="static/jms.jpg" alt="JMS" width="50" height="50" style='margin-left:60px' onclick="myFunction2()"/>
+    
+      </div>
+      <div class="popup2" onclick="myFunction2()">
+        <div class="popuptext" id="myPopup2">
+          <h2>Ram : 145620 gb</h2>
+          <br />
+          <h2>Ram : 1276540 gb</h2>
+          <br />
+          <h2>Harddisk : 120 gb</h2>
+          <br />
+          <h2>cpu : 120 gb</h2>
+          <br />
+          <h2>Ram : 120 gb</h2>
+          <br />
+        </div>
+      </div>
+      <div>
+        <img src="static/kafka.jpg" width="50" height="50" style='margin-left:60px' onclick="myFunction3()" />
+   
+      </div>
+      <div class="popup3" onclick="myFunction3()">
+        <div class="popuptext" id="myPopup3">
+          <h2>Ram : 127890 gb</h2>
+          <br />
+          <h2>Ram : 820 gb</h2>
+          <br />
+          <h2>Harddisk : 120 gb</h2>
+          <br />
+          <h2>cpu : 120 gb</h2>
+          <br />
+          <h2>Ram : 190 gb</h2>
+          <br />
+        </div>
+      </div>
+    </div>
+    {% comment %}
+    <img
+      src="static/mulesoft.jpg"
+      alt="Mulesoft"
+      width="150"
+      height="150"
+      class="mulesoft"
+    />
+    <button
+      class="mulesoftbutton"
+      width="200"
+      height="200"
+      onclick="myFunction()"
+    >
+      Mulesoft
+    </button>
+
+    <div class="popup" onclick="myFunction()">
+      <div class="popuptext" id="myPopup">
+        <h2>Ram : 120 gb</h2>
+        <br />
+        <h2>Ram : 120 gb</h2>
+        <br />
+        <h2>Harddisk : 120 gb</h2>
+        <br />
+        <h2>cpu : 120 gb</h2>
+        <br />
+        <h2>Ram : 120 gb</h2>
+        <br />
+      </div>
+    </div>
+    <img src="static/aws.jpg" alt="AWS" width="150" height="150" class="AWS" />
+    <button class="AWSbutton" width="300" height="400">AWS</button>
+
+    <img
+      src="static/database.jpg"
+      alt="Db"
+      width="100"
+      height="150"
+      class="Database"
+    />
+    <button
+      class="DatabaseButton"
+      width="300"
+      height="400"
+      onclick="myFunction()"
+    >
+      Database
+    </button>
+    {% endcomment %}
+  </body>
+  <script>
+    function openNav() {
+      document.getElementById("mySidepanel").style.width = "200px";
+    }
+    function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+    }
+
+    function bellAlert() {
+      alert("Data");
+    }
+    function dashboard() {
+      document.getElementById("closebtn").style.display = "dashboard";
+      console.log("hwhs");
+    }
+    function userbutton() {
+      alert(" myprofile xyz@gmail.com")
+    }
+  </script>
+</html>
